@@ -1,5 +1,5 @@
 {
-  "name": "1-Passport-Example",
+  "name": "Project 2 - Virtual Vacation",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -14,13 +14,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcryptjs": "2.4.3",
-    "express": "^4.17.0",
-    "express-session": "^1.16.1",
-   
-    "passport": "^0.4.0",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
+    "mysql2": "^2.1.0",
+    "passport": "^0.4.1",
     "passport-local": "^1.0.0",
-    "sequelize": "^5.8.6"
+    "sequelize": "^5.21.5"
   },
   "devDependencies": {
     "chai": "^4.1.2",
