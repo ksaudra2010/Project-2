@@ -2,13 +2,20 @@
   "env": {
     "browser": true,
     "commonjs": true,
+<<<<<<< HEAD
     "node": true,
     "es6": true
+=======
+    "node": true
+>>>>>>> 18b5435854dfbb03908d942f4b6b21e01245ea9f
   },
   "extends": "prettier",
   "plugins": ["prettier"],
   "rules": {
+<<<<<<< HEAD
     "no-var": "warn",
+=======
+>>>>>>> 18b5435854dfbb03908d942f4b6b21e01245ea9f
     "no-duplicate-case": "error",
     "no-empty": "error",
     "no-extra-semi": "error",
