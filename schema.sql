@@ -1,0 +1,1 @@
+SELECT * FROM places_db.tripchoices;
