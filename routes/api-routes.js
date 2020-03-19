@@ -1,5 +1,7 @@
 // Requiring our models and passport as we've configured it
 const axios = require('axios');
+const env = process.env.NODE_ENV || 'development';
+const config = require(__dirname + '/../config/config.json')[env];
 const db = require('../models');
 const passport = require('../config/passport');
 
@@ -57,18 +59,18 @@ module.exports = function (app) {
       method: 'GET',
       url: `https://webcamstravel.p.rapidapi.com/webcams/list/nearby=${req.params.lat},${req.params.lon},250`,
       headers: {
-        'content-type':'application/octet-stream',
-        'x-rapidapi-host':'webcamstravel.p.rapidapi.com',
-        'x-rapidapi-key':'4bbb8ffc94msh0c3349efbea52d1p11acb0jsn79772d7421db',
+        'content-type': 'application/octet-stream',
+        'x-rapidapi-host': 'webcamstravel.p.rapidapi.com',
+        'x-rapidapi-key': config.apikey,
       },
       params: {
         lang: 'en',
-        show: 'webcams%3Aimage%2Clocation',
+        show: 'webcams:image,location',
       },
     })
       .then((response) => {
-        console.log(response.data);
-        return response.data;
+        // console.log(response.data);
+        res.json(response.data);
       })
       .catch((error) => {
         console.log(error);
