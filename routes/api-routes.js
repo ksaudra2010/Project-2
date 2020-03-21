@@ -77,4 +77,19 @@ module.exports = function (app) {
         console.log(error);
       });
   });
+
+  app.post('/api/places', (req, res) => {
+    db.Places.findAll({
+      where: {
+        ruralurban: req.body.ruralurban,
+        terrain: req.body.terrain,
+        people: req.body.people,
+        culture: req.body.culture,
+        expensive: req.body.expensive
+      }
+    })
+      .then(function(dbPost) {
+        res.json(dbPost);
+      });
+  })
 };
