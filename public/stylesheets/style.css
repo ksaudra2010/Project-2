@@ -9,25 +9,9 @@ form.login {
   
 }
 
-  
 .label {
   font-weight: normal;
 }
-.container {
-  padding: 0px;
-  color: rgba(red, green, blue, alpha)
-}
-h1 {
-  font-weight: bold;
-}
-
-  
-  
-  
-
-
-
-
 
 #myVideo {
   position: fixed;
@@ -36,4 +20,5 @@ h1 {
   min-width: 100%; 
   min-height: 100%;
 }
+ 
 
