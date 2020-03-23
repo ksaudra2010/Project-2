@@ -1,8 +1,9 @@
 <h1>Results</h1>
 
 <p>Destination:</p>
-{{#each destinations}}
-  {{name}}
-  {{> thumbnails}}
+{{#each destination}}
+  <h1>{{destination.name}}</h1>
+  {{> images destination.images}}
   <br>
 {{/each}}
+<img id='bigPicture' src=''>

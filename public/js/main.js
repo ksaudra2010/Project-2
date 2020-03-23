@@ -14,17 +14,17 @@ $(document).ready(() => {
 function submitInput(){
   const ruralurban = $('#locale').val();
   const terrain = $('#attribute').val();
-  if ($('#morePeople').isChecked()){
+  if ($('#morePeople').attr("checked", "checked")){
     var people = 'Lots';
   } else {
     var people = 'Fewer';
   }
-  if ($('#hard').isChecked()){
-    var culture = 'Hard';
+  if ($('#hard').attr("checked", "checked")){
+    var effort = 'Hard';
   } else {
-    var culture = 'Easy';
+    var effort = 'Easy';
   }
-  if ($('#expensive').isChecked()){
+  if ($('#expensive').attr("checked", "checked")){
     var expensive = 'Expensive';
   } else {
     var expensive = 'Reasonable';
@@ -33,16 +33,42 @@ function submitInput(){
     ruralurban: ruralurban,
     terrain: terrain,
     people: people,
-    culture: culture,
+    effort: effort,
     expensive: expensive
   }
   $.post('/api/places', obj)
     .then((res) => {
-      console.log(res);
+      const destinations = [];
+      res.forEach(location => {
+        $.get(`/api/images/${location.latltude}/${location.longitude}`, {
+    
+        })
+          .then((data) => {
+            const destination = { name: location.name, images: data};
+            destinations.push(destination);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      });
+      return destinations;
+
+    })
+    .then((dest) => {
+      const object = { dest };
+      console.log('Send to /api/results/: ', object);
+      $.post('/api/results', object)
+        .then((res) => {
+
+        });
     })
     .catch((err) => {
       console.log(err);
     });
 
   return false;
+}
+function showPreview(img) {
+  const src = $(img).data('preview');
+  $('#bigPicture').attr('src', src);
 }

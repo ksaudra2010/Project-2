@@ -71,7 +71,7 @@ module.exports = function (app) {
     })
       .then((response) => {
         // console.log(response.data);
-        res.json(response.data);
+        res.json(response.data.result.webcams);
       })
       .catch((error) => {
         console.log(error);
@@ -79,17 +79,23 @@ module.exports = function (app) {
   });
 
   app.post('/api/places', (req, res) => {
-    db.Places.findAll({
+    console.log(req.body);
+    db.tripchoice.findAll({
       where: {
         ruralurban: req.body.ruralurban,
         terrain: req.body.terrain,
         people: req.body.people,
-        culture: req.body.culture,
+        effort: req.body.effort,
         expensive: req.body.expensive
       }
     })
-      .then(function(dbPost) {
-        res.json(dbPost);
+      .then(function(result) {
+        res.json(result);
       });
-  })
+  });
+
+  app.post('/api/results', (req, res) => {
+    console.log('Post Body:', req.body);
+    res.render('results', req.body);
+  });
 };

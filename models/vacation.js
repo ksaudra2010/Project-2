@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes) {
       ruralurban: DataTypes.STRING,
       terrain: DataTypes.STRING,
       people: DataTypes.STRING,
-      culture: DataTypes.STRING,
+      effort: DataTypes.STRING,
       expensive: DataTypes.STRING,
       latitude: DataTypes.DECIMAL,
       longitude: DataTypes.DECIMAL
