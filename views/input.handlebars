@@ -1,0 +1,44 @@
+<h1>Choose your Virtual Vacation parameters:</h1>
+
+<label for="locale">Locale:</label>
+
+<select id="locale">
+  <option value="Any" selected="true" >Any</option>
+  <option value="Urban">Urban</option>
+  <option value="Rural">Rural</option>
+</select>
+<br><br>
+<label for="attribute">Attribute:</label>
+
+<select id="attribute">
+  <option value="Any" selected="true" >Any</option>
+  <option value="Mountains">Mountains</option>
+  <option value="Beach">Beach</option>
+  <option value="Other">Other</option>
+</select>
+<br><br>
+<p>Privacy:</p>
+<input type="radio" id="morePeople" name="privacy" value="More People" checked="checked">
+<label for="morePeople">More People</label><br>
+<input type="radio" id="lessPeople" name="privacy" value="Less People">
+<label for="lessPeople">Less People</label><br>
+<br><br>
+<p>Trasvel Effort:</p>
+<input type="radio" id="hard" name="effort" value="Hard to get to" checked="checked">
+<label for="hard">Hard to get to</label><br>
+<input type="radio" id="easy" name="effort" value="Easy to get to">
+<label for="easy">Easy to get to</label><br>
+<br><br>
+<p>Price:</p>
+<input type="radio" id="expensive" name="price" value="Expensive" checked="checked">
+<label for="expensive">Expensive</label><br>
+<input type="radio" id="reasonable" name="price" value="Reasonable">
+<label for="reasonable">Reasonable</label><br>
+<br><br>
+<p>Vibe:</p>
+<input type="radio" id="culture" name="vibe" value="Culture" checked="checked">
+<label for="culture">Culture</label><br>
+<input type="radio" id="fun" name="vibe" value="Good old fun">
+<label for="fun">Good old fun</label><br>
+<br><br>
+<button id="submit" onclick="return submitInput();">Submit</button>
