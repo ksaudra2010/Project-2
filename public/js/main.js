@@ -38,29 +38,26 @@ function submitInput(){
   }
   $.post('/api/places', obj)
     .then((res) => {
-      const destinations = [];
-      res.forEach(location => {
-        $.get(`/api/images/${location.latltude}/${location.longitude}`, {
-    
-        })
+      const destinations = res.map(location => {
+
+        return $.get(`/api/images/${location.latltude}/${location.longitude}`)
           .then((data) => {
-            const destination = { name: location.name, images: data};
-            destinations.push(destination);
+            return { name: location.name, images: data};
           })
-          .catch((err) => {
-            console.log(err);
-          });
       });
       return destinations;
-
     })
     .then((dest) => {
-      const object = { dest };
-      console.log('Send to /api/results/: ', object);
-      $.post('/api/results', object)
-        .then((res) => {
-
+     
+      Promise.all( dest ).then(results => {
+        const object = { results };
+        console.log('Send to /api/results/: ', object);
+        $.post('/api/results', object)
+          .then((res) => {
+            
         });
+      });
+      
     })
     .catch((err) => {
       console.log(err);
