@@ -71,10 +71,27 @@ module.exports = function (app) {
     })
       .then((response) => {
         // console.log(response.data);
-        res.json(response.data);
+        res.json(response.data.result.webcams);
       })
       .catch((error) => {
         console.log(error);
       });
   });
+
+  app.post('/api/places', (req, res) => {
+    console.log(req.body);
+    db.tripchoice.findAll({
+      where: {
+        ruralurban: req.body.ruralurban,
+        terrain: req.body.terrain,
+        people: req.body.people,
+        effort: req.body.effort,
+        expensive: req.body.expensive
+      }
+    })
+      .then(function(result) {
+        res.json(result);
+      });
+  });
+
 };
