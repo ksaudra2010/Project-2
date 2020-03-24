@@ -51,10 +51,10 @@ function submitInput(){
       Promise.all( dest ).then(results => {
         console.log('Send to /api/results/: ', results);
         results.forEach( location => {
-          $('#results').append($('<h1>').text(location.name));
+          $('#results').append($('<h2 class="subtitle">').text(location.name));
           for (let x = 0; x < location.images.length; x++) {
             const el = location.images[x];
-            $('#results').append($(`<img src="${el.image.daylight.thumbnail}" data-preview="${el.image.daylight.preview}" title="${el.title}">`));
+            $('#results').append($(`<img class="thumb" src="${el.image.daylight.thumbnail}" data-preview="${el.image.daylight.preview}" title="${el.title}">`));
           }
         });
       });
