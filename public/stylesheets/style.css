@@ -28,6 +28,10 @@ font-size: 50px;
 font-weight: 800;
 } 
   
+.modal-background
+{
+    opacity:0.5 !important;
+}
 
 
 
