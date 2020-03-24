@@ -10,7 +10,8 @@
 <br><br>
 <label for="attribute">Attribute:</label>
 <select id="attribute">
-  <option value="Neither" selected="true" >Neither</option>
+  <option value="Both" selected="true" >Both</option>
+  <option value="Neither">Neither</option>
   <option value="Mountains">Mountains</option>
   <option value="Beach">Beach</option>
 </select>
@@ -21,7 +22,7 @@
 <input type="radio" id="lessPeople" name="privacy" value="Less People">
 <label for="lessPeople">Less People</label><br>
 <br><br>
-<p>Trasvel Effort:</p>
+<p>Travel Effort:</p>
 <input type="radio" id="hard" name="effort" value="Hard to get to" checked="checked">
 <label for="hard">Hard to get to</label><br>
 <input type="radio" id="easy" name="effort" value="Easy to get to">
@@ -41,3 +42,6 @@
     <div id='results'></div>
   </div>
 </section>
+<div id="preview" style="display: none;">
+  <img id="bigPicture" src="">
+</div>
