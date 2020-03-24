@@ -22,7 +22,11 @@ h1 {
 }
 
   
-  
+#vaykay {
+font-family: 'Great Vibes', cursive;
+font-size: 50px;
+font-weight: 800;
+} 
   
 
 
@@ -36,4 +40,3 @@ h1 {
   min-width: 100%; 
   min-height: 100%;
 }
-
