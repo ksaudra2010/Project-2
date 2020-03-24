@@ -25,59 +25,58 @@
   </style>
 </head>
 <body>
-  <div class="modal is-active">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head" style="background-color: rgb(31, 29, 29);">
-        <p class="modal-card-title" style="color: rgb(221, 219, 219); font-family: 'Aclonica', sans-serif;">Sign up</p>
-        <button class="delete" aria-label="close"></button>
-      </header>
-      <section class="modal-card-body">
-      <form  class="signup">
-      <section class="modal-card-body">
-        <div class="navbar-item" id="vaykay" style="font-size: 55px;">      
-          Virtual Vacation
-        </div>
-        <br>
-        <div class="field">
-          <p class="control has-icons-left has-icons-right">
-            <input id="email-input" class="input" type="email" placeholder="Email">
-            <span class="icon is-small is-left">
-              <i class="fas fa-envelope"></i>
-            </span>
-          </p>
-        </div>
-        <br>
-        <div class="field">
-          <p class="control has-icons-left">
-            <input id="password-input" class="input" type="password" placeholder="Password">
-            <span class="icon is-small is-left">
-              <i class="fas fa-lock"></i>
-            </span>
-          </p>
-        </div>
-        <div class="field">
-          <p class="control">
-            <br>
-            <button class="button is-outlined is-dark">
-              Sign up
-            </button>
-          </p>
-          <br>
-          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
-            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-            <span class="sr-only">Error:</span> <span class="msg"></span>
+  <form  class="signup">
+    <div class="modal is-active">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head" style="background-color: rgb(31, 29, 29);">
+          <p class="modal-card-title" style="color: rgb(221, 219, 219); font-family: 'Aclonica', sans-serif;">Sign up</p>
+          <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body ">
+          <div class="navbar-item" id="vaykay" style="font-size: 55px;">      
+            Virtual Vacation
           </div>
-          <p>Or Log in <a href="login.html">here</a></p>
-        </div>
+          <br>
+          <div class="field">
+            <p class="control has-icons-left has-icons-right">
+              <input id="email-input" class="input" type="email" placeholder="Email">
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+            </p>
+          </div>
+          <br>
+          <div class="field">
+            <p class="control has-icons-left">
+              <input id="password-input" class="input" type="password" placeholder="Password">
+              <span class="icon is-small is-left">
+                <i class="fas fa-lock"></i>
+              </span>
+            </p>
+          </div>
+          <div class="field">
+            <p class="control">
+              <br>
+              <button class="button is-outlined is-dark">
+                Sign up
+              </button>
+            </p>
+            <br>
+            <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+              <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+              <span class="sr-only">Error:</span> <span class="msg"></span>
+            </div>
+            <p>Or Log in <a href="login.html">here</a></p>
+          </div>
+        </section>
       </div>
-    </form>
-      </section>
-      </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/signup.js"></script>
-    <video autoplay muted loop id="myVideo">
-      <source src="assets/images/signup.mp4" type="video/mp4">
-    </video>
+    </div>
+  </form>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/signup.js"></script>
+  <video autoplay muted loop id="myVideo">
+    <source src="assets/images/signup.mp4" type="video/mp4">
+  </video>
 </body>
 </html>

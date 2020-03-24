@@ -57,16 +57,11 @@ function submitInput(){
             $('#results').append($(`<img src="${el.image.daylight.thumbnail}" data-preview="${el.image.daylight.preview}" title="${el.title}">`));
           }
         });
-        
-
-        
       });
-      
     })
     .catch((err) => {
       console.log(err);
     });
-
   return false;
 }
 function showPreview(img) {
