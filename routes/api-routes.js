@@ -94,8 +94,4 @@ module.exports = function (app) {
       });
   });
 
-  app.post('/api/results', (req, res) => {
-    console.log('Post Body:', req.body);
-    res.render('results', req.body);
-  });
 };
