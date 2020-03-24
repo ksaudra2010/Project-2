@@ -1,30 +1,27 @@
 $(document).ready(() => {
-  $('.clickMe').click(() => {
-    $.get('/api/images/21/-157', {
-    
-    })
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  $("#preview").dialog({
+    autoOpen: false,
+    modal: true,
+    height: "auto",
+    width: "auto",
+    resizable: false,
   });
 });
 function submitInput(){
+  $('#results').empty();
   const ruralurban = $('#locale').val();
   const terrain = $('#attribute').val();
-  if ($('#morePeople').attr("checked", "checked")){
+  if ($("input[name='privacy']:checked").prop('id') === 'morePeople'){
     var people = 'Lots';
   } else {
     var people = 'Fewer';
   }
-  if ($('#hard').attr("checked", "checked")){
+  if ($("input[name='effort']:checked").prop('id') === 'hard'){
     var effort = 'Hard';
   } else {
     var effort = 'Easy';
   }
-  if ($('#expensive').attr("checked", "checked")){
+  if ($("input[name='price']:checked").prop('id') === 'expensive'){
     var expensive = 'Expensive';
   } else {
     var expensive = 'Reasonable';
@@ -54,7 +51,7 @@ function submitInput(){
           $('#results').append($('<h2 class="subtitle">').text(location.name));
           for (let x = 0; x < location.images.length; x++) {
             const el = location.images[x];
-            $('#results').append($(`<img class="thumb" src="${el.image.daylight.thumbnail}" data-preview="${el.image.daylight.preview}" title="${el.title}">`));
+            $('#results').append($(`<img class="thumb" src="${el.image.daylight.thumbnail}" data-preview="${el.image.daylight.preview}" title="${el.title}" onclick="showPreview(this)">`));
           }
         });
       });
@@ -67,4 +64,5 @@ function submitInput(){
 function showPreview(img) {
   const src = $(img).data('preview');
   $('#bigPicture').attr('src', src);
+  $('#preview').dialog('open');
 }
