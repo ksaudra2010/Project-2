@@ -2,37 +2,29 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
+  <title>Virtual Vacation</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
   <link href="stylesheets/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" href="https://YourFaviconLinkHere.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="./assets/images/vacation.ico" type="image/x-icon"/>
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-<style>
-  * {
-    box-sizing: border-box;
-  }
-  
-  
-  
-  #myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-  }
-  
-  
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%; 
+      min-height: 100%;
+    }
   </style>
 </head>
-
 <body>
-  
   <div class="modal is-active">
     <div class="modal-background"></div>
     <div class="modal-card">
@@ -46,14 +38,13 @@
         <div class="navbar-item" id="vaykay" style="font-size: 55px;">      
           Virtual Vacation
         </div>
-<br>
+        <br>
         <div class="field">
           <p class="control has-icons-left has-icons-right">
             <input id="email-input" class="input" type="email" placeholder="Email">
             <span class="icon is-small is-left">
               <i class="fas fa-envelope"></i>
             </span>
-           
           </p>
         </div>
         <br>
@@ -79,7 +70,6 @@
           </div>
           <p>Or Log in <a href="login.html">here</a></p>
         </div>
-  
       </div>
     </form>
       </section>
@@ -89,7 +79,5 @@
     <video autoplay muted loop id="myVideo">
       <source src="assets/images/signup.mp4" type="video/mp4">
     </video>
-
 </body>
-
 </html>
