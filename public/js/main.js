@@ -36,7 +36,7 @@ function submitInput(){
   $.post('/api/places', obj)
     .then((res) => {
       const destinations = res.map(location => {
-        console.log(location.latitude,location.longitude);
+        // console.log(location.latitude,location.longitude);
         return $.get(`/api/images/${location.latitude}/${location.longitude}`)
           .then((data) => {
             return { name: location.name, images: data};
@@ -46,7 +46,7 @@ function submitInput(){
     })
     .then((dest) => {
       Promise.all( dest ).then(results => {
-        console.log('Send to /api/results/: ', results);
+        // console.log('Send to /api/results/: ', results);
         results.forEach( location => {
           $('#results').append($('<h2 class="subtitle">').text(location.name));
           for (let x = 0; x < location.images.length; x++) {
