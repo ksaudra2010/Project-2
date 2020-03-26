@@ -70,7 +70,7 @@ module.exports = function (app) {
       },
     })
       .then((response) => {
-        // console.log(response.data);
+        console.log(response.data);
         res.json(response.data.result.webcams);
       })
       .catch((error) => {
@@ -79,7 +79,7 @@ module.exports = function (app) {
   });
 
   app.post('/api/places', (req, res) => {
-    // console.log(req.body);
+    console.log(req.body);
     db.tripchoice.findAll({
       where: {
         ruralurban: req.body.ruralurban,
