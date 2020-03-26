@@ -8,7 +8,9 @@ $(document).ready(() => {
   });
 });
 function submitInput(){
+  
   $('#results').empty();
+  console.log("HERE");
   const ruralurban = $('#locale').val();
   const terrain = $('#attribute').val();
   if ($("input[name='privacy']:checked").prop('id') === 'morePeople'){
@@ -46,7 +48,7 @@ function submitInput(){
     })
     .then((dest) => {
       Promise.all( dest ).then(results => {
-        // console.log('Send to /api/results/: ', results);
+        console.log('Send to /api/results/: ', results);
         results.forEach( location => {
           $('#results').append($('<h2 class="subtitle">').text(location.name));
           for (let x = 0; x < location.images.length; x++) {
