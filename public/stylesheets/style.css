@@ -45,3 +45,15 @@ font-weight: 800;
   font-size: 25px;
   
   }
+  .column {
+    float: left;
+    width: 30%;
+    padding: 10px;
+   
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

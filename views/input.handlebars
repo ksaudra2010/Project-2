@@ -1,58 +1,82 @@
 
+   <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <div class="navbar-item" id="vaykay">      
+      Virtual Vacation
+    </div>
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+     
+    </div>
+
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
         
-          <a class="button is-danger is-outlined" href="home.handlebars">
+          <a class="button is-danger is-outlined" href="/">
             <strong>Home</strong>
           </a>
          
         </div>
       </div>
     </div>
+  </div>
+</nav>
 <br>
 
 <h1 id="page" style="text-align: center;">Choose your Virtual Vacation parameters:</h1>
 <br>
 <div style="text-align: center;" class="all">
-<label for="locale">Locale:</label>
 
+<label for="locale">Locale:</label>
 <select id="locale">
   <option value="Both" selected="true" >Both</option>
   <option value="Urban">Urban</option>
   <option value="Rural">Rural</option>
 </select>
-<br><br>
-<label for="attribute">Attribute:</label>
 
+<label for="attribute">Attribute:</label>
 <select id="attribute">
-  <option value="Neither" selected="true" >Neither</option>
+  <option value="Both" selected="true" >Both</option>
+    <option value="Neither">Both</option>
   <option value="Mountains">Mountains</option>
   <option value="Beach">Beach</option>
 </select>
-<br><br>
+<div class="row">
+  <div class="column">
 <p>Privacy:</p>
 <input type="radio" id="morePeople" name="privacy" value="More People" checked="checked">
 <label for="morePeople">More People</label><br>
 <input type="radio" id="lessPeople" name="privacy" value="Less People">
 <label for="lessPeople">Less People</label><br>
-<br><br>
+</div>
+  <div class="column">
 <p>Travel Effort:</p>
 <input type="radio" id="hard" name="effort" value="Hard to get to" checked="checked">
 <label for="hard">Hard to get to</label><br>
 <input type="radio" id="easy" name="effort" value="Easy to get to">
 <label for="easy">Easy to get to</label><br>
-<br><br>
+</div>
+  <div class="column">
 <p>Price:</p>
 <input type="radio" id="expensive" name="price" value="Expensive" checked="checked">
 <label for="expensive">Expensive</label><br>
 <input type="radio" id="reasonable" name="price" value="Reasonable">
-<label for="reasonable">Reasonable</label><br>
-<br><br>
+<label for="reasonable">Reasonable</label>
+</div>
 
-<br><br>
+<br><br><br>
 
 <button id="submit" class="button is-outlined is-dark" onclick="return submitInput();">Submit</button>
 <br><br>
-<div id='results'></div>
+<div id='preview' style="display: none;">
+  <img id="bigPicture" src=""> 
+  </div>
   
