@@ -1,5 +1,22 @@
-<h1>Choose your Virtual Vacation parameters:</h1>
 
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+        
+          <a class="button is-danger is-outlined" href="home.handlebars">
+            <strong>Home</strong>
+          </a>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<br>
+
+<h1 id="page" style="text-align: center;">Choose your Virtual Vacation parameters:</h1>
+<br>
+<div style="text-align: center;" class="all">
 <label for="locale">Locale:</label>
 
 <select id="locale">
@@ -9,9 +26,9 @@
 </select>
 <br><br>
 <label for="attribute">Attribute:</label>
+
 <select id="attribute">
-  <option value="Both" selected="true" >Both</option>
-  <option value="Neither">Neither</option>
+  <option value="Neither" selected="true" >Neither</option>
   <option value="Mountains">Mountains</option>
   <option value="Beach">Beach</option>
 </select>
@@ -22,7 +39,7 @@
 <input type="radio" id="lessPeople" name="privacy" value="Less People">
 <label for="lessPeople">Less People</label><br>
 <br><br>
-<p>Travel Effort:</p>
+<p>Trasvel Effort:</p>
 <input type="radio" id="hard" name="effort" value="Hard to get to" checked="checked">
 <label for="hard">Hard to get to</label><br>
 <input type="radio" id="easy" name="effort" value="Easy to get to">
@@ -34,14 +51,10 @@
 <input type="radio" id="reasonable" name="price" value="Reasonable">
 <label for="reasonable">Reasonable</label><br>
 <br><br>
-<button id="submit" onclick="return submitInput();">Submit</button>
+
 <br><br>
-<section class="section">
-  <div class="container">
-    <h1 class="title">Destinations</h1>
-    <div id='results'></div>
-  </div>
-</section>
-<div id="preview" style="display: none;">
-  <img id="bigPicture" src="">
-</div>
+
+<button id="submit" class="button is-outlined is-dark" onclick="return submitInput();">Submit</button>
+<br><br>
+<div id='results'></div>
+  
