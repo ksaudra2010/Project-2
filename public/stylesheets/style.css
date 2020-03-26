@@ -51,7 +51,9 @@ font-weight: 800;
     padding: 10px;
    
   }
-  
+  #bg {
+    background-color: burlywood;
+  }
   .row:after {
     content: "";
     display: table;
