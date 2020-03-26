@@ -35,3 +35,13 @@ font-weight: 800;
 .thumb {
   margin: 1em;
 }
+#page {
+  font-family: 'IM Fell Great Primer SC', serif;
+  font-size: 35px;
+  }
+  
+  .all{
+  font-family: 'IM Fell Great Primer SC', serif;
+  font-size: 25px;
+  
+  }
